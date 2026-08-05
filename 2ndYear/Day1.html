@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main{
+            margin:100px auto;
+            /* text-align: center; */
+            width:300px;
+            background-color: beige;
+        }
+        .pattn{
+            display: grid;
+            grid-template-columns: auto auto;
+            border:1px solid black;
+            padding:20px;
+        }
+    </style>
+</head>
+<body style="background-color: black;">
+    <main>
+        <div id="pattn1" class="pattn">
+        <div><button id="btn1">Click to Check Pattern1</button>
+        </div>
+        </div>
+        <div class="pattn" id="pattn2"><div><button id="btn2">Click to Check Pattern2</button></div></div>
+    </main>
+    <script>
+        let elm=document.querySelector("#btn1");
+        let div=document.createElement("div");
+            for(let i=0;i<5;i++)
+        {
+            let para=document.createElement("p");
+            para.style.width="80%";
+            for(let j=0;j<=i;j++)
+        {
+            if(j==0)
+            para.innerText+="*";
+        else
+        para.innerText+=" *";
+        }
+        div.append(para);
+        }
+        div.style.color="red"
+        div.style.margin="0px"
+        elm.onclick=()=>{
+            document.getElementById("pattn1").append(div);
+        }
+        let div2=document.createElement("div");
+               for(let i=0;i<5;i++)
+        {
+            let para=document.createElement("p");
+            para.style.width="80%";
+            for(let j=0;j<=i;j++)
+        {
+            if(j==0)
+            para.innerText+="*";
+        else
+        para.innerText+=" *";
+        }
+        div2.append(para);
+        }
+        for(let i=5;i>0;i--)
+        {
+             let para=document.createElement("p");
+            para.style.width="80%";
+            for(let j=1;j<=i-1;j++)
+        {
+             if(j==1)
+            para.innerText+="*";
+        else
+        para.innerText+=" *";
+        }
+        div2.append(para);
+        }
+        document.querySelector("#btn2").onclick=()=>{
+            document.querySelector("#pattn2").append(div2)
+             document.querySelector("#pattn2").style.backgroundColor="orange";
+        }
+    </script>
+</body>
+</html>
