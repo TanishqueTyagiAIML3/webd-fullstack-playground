@@ -1,8 +1,8 @@
 // let student={
-//     "Name":'Tanishque',
-//     "Roll":2503215300208,
-//      "ID":12345,
-//      "Branch": "AIML",
+//     Name:'Tanishque',
+//     Roll:2503215300208,
+//      ID:12345,
+//      Branch: "AIML",
 // }
 // for(key in student){
 //     console.log(key," ",student[key])
@@ -29,3 +29,24 @@
 //     sum+=i;
 // }
 // console.log(sum)
+// let arr=[['Tanishque','Tyagi',19],['Sarthak','Srivastava',20],['Rahul','Sing',18]]
+// for(i of arr){
+//     console.log("firstname",i[0])
+//         console.log("lastname",i[1])
+//     console.log("age",i[2])
+// }
+// let obj=[{id:1234,name:"Tanishque"},{id:221,name:"sarthak"}]
+// for(i of obj){
+//     console.log(i["id"])
+// }
+// const emply={
+//     id:123,
+//     name:'Tanishque Tyagi',
+//     department:'AIML',
+//     deposite:function(){
+//         console.log("Name ",this.name)
+//         console.log("ID ",this.id)
+//         console.log("Department", this.department)
+//     }
+// }
+// emply.deposite()
