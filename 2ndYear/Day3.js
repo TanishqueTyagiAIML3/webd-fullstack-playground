@@ -50,10 +50,10 @@
 //     }
 // }
 // emply.deposite()
-let student={
-    name:'Tanishque',
-}
-student.course="Btech"
-console.log(student)
-delete student["name"]
-console.log(student)
+// let student={
+//     name:'Tanishque',
+// }
+// student.course="Btech"
+// console.log(student)
+// delete student["name"]
+// console.log(student)
