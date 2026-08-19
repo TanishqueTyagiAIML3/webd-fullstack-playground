@@ -28,3 +28,11 @@ console.log(date)
 console.log("Year=",date.getFullYear())
 console.log("Month",date.getMonth()+1)
 console.log("Date",date.getDate())
+// Maths func
+console.log("Maths",Math.PI)
+let a=[10,2,3]
+console.log("Max",Math.max(...a))
+console.log("Min",Math.min(10,203,-19))
+console.log("Power",Math.pow(2,3))
+console.log("ceil",Math.ceil(34.4))
+console.log("Floor",Math.floor(34.3))
