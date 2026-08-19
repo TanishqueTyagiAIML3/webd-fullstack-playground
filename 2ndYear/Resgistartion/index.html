@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        main {
+            margin: auto auto;
+            display: grid;
+            grid-template-columns: auto;
+            width: 20%;
+            border: 1px solid black;
+            padding: 10px;
+
+        }
+
+        button {
+            background-color: green;
+            width: 100%;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <form>
+        <main>
+            <h3 style="text-align:center">Registration Form</h3>
+            <label for="">
+                <h4>Enter Name</h4>
+            </label>
+            <input type="text" name="" id="name" required placeholder="Your name here">
+            <label for="">
+                <h4>Eneter Email</h4>
+            </label>
+            <input type="email" name="" id="mail" required placeholder="Your email">
+            <label for="">
+                <h4>Enter Password</h4>
+            </label>
+            <input type="password" name="" id="pass" required placeholder="Enter Password">
+            <label for="">
+                <h4>Re-enter Password</h4>
+            </label>
+            <input type="password" name="" id="repas" required placeholder="Reenter Password">
+            <label for="">
+                <h4>Enter Mobile Number</h4>
+            </label>
+            <input type="number" name="" id="no" required placeholder="Enter Mobile Number">
+            <button>Submit</button>
+        </main>
+    </form>
+    <script>
+        let inp1 = document.querySelector("#name")
+        let name = ""
+        let valid_name = false
+        let valid_no = false
+        inp1.onchange = () => {
+            let count = 0
+            name = inp1.value;
+            for (let i of name) {
+                if ((i >= 'a' && i < 'z') || (i >= 'A' && i <= 'Z') || i == ' ')
+                    count++;
+            }
+            console.log(count)
+            if (count == name.length)
+                valid_name = true
+        }
+        let inp2 = document.querySelector("#pass")
+        let inp3 = document.querySelector("#repas")
+        let pass1 = null
+        let pass2 = null
+        inp3.onchange = () => {
+            pass2 = parseInt(inp3.value)
+        }
+        inp2.onchange = () => {
+            pass1 = parseInt(inp2.value)
+        }
+        let inp4 = document.querySelector("#no")
+        inp4.onchange = () => {
+            let count = 0
+            for (let i of inp4.value) {
+                if (i >= '0' && i <= '9')
+                    count++
+            }
+            if (count == 10)
+                valid_no = true
+        }
+        let inp5 = document.querySelector("#mail")
+        let valid_mail = false
+        inp5.onchange = () => {
+            if (inp5.value.include("@"))
+                valid_mail = true
+        }
+        document.querySelector("button").onclick = () => {
+            if (valid_name == true && pass1 === pass2 && valid_no == true && valid_mail == true)
+                alert("Submitted")
+            else if (valid_name == false)
+                alert("Invalid Name")
+            else if (pass1 !== pass2)
+                alert("Password not match")
+            else if (valid_no == false)
+                alert("Mobile Number should be 10 digit")
+            else if (valid_mail == false)
+                alert("Email should include @ sign")
+
+        }
+    </script>
+</body>
+
+</html>
