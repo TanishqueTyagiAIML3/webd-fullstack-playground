@@ -17,8 +17,22 @@ let emply={
         this.Salary=this.Salary+amt;
     },
     display:function(){
+        console.log("Name",this.name)
         console.log("Update Salary",this.Salary)
     },
 }
-emply.update(100)
 emply.display();
+
+let student={
+    name:"Tanishque",
+    marks:70,
+    add:function(m1,m2,m3,m4,m5){
+        this.marks=this.marks+(m1+m2+m3+m4+m5)
+    },
+    display:function(){
+        console.log("Name",this.name)
+        console.log("Marks",this.marks)
+    },
+}
+student.add(1,3,4,5,2)
+student.display()
