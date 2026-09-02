@@ -9,7 +9,7 @@ let obj={
         console.log(this.frind);
     }
 }
-obj.display()
+// obj.display()
 let emply={
     name:"Rahul",
     Salary:15000,
@@ -21,7 +21,7 @@ let emply={
         console.log("Update Salary",this.Salary)
     },
 }
-emply.display();
+// emply.display();
 
 let student={
     name:"Tanishque",
@@ -35,4 +35,34 @@ let student={
     },
 }
 student.add(1,3,4,5,2)
-student.display()
+// student.display()
+
+function show(){
+    console.log("My college",this.college)
+    console.log("My school",this.school)
+}
+let detial={
+    college:'ABES Engineering College',
+    school:'Ingraham Institue English School',
+    prs:show
+}
+// detial.prs()
+function college(){
+    console.log("College",this.college)
+    console.log("Name",this.name)
+    console.log("ID",this.id)
+}
+let depart={
+    name:"AIML",
+    id:123,
+    college:"ABES Engineering College",
+    detail:college
+}
+let clas={
+    name:"Section A",
+    id:1200,
+    college:"ABES Engineering College",
+    detail:college
+}
+depart.detail()
+clas.detail()
