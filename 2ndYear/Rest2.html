@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+ <body>
+    <script>
+        let a=parseInt(prompt("Enter the size"))
+        let arr=[]
+        for(let i=0;i<a;i++)
+    {
+        let b=parseInt(prompt(`Enter the ${i+1} value`))
+        arr.push(b)
+    }
+    function sum(...num)
+{
+    let sum1=0
+    for(let i=0;i<a;i++)
+    sum1=sum1+parseInt(arr[i])
+   return sum1;
+}
+alert(`Sum of values = ${sum(arr)} `)
+    </script>
+</body>
+</html>
