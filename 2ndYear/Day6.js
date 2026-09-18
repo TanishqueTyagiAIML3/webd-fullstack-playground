@@ -33,15 +33,29 @@
 // }
 // let obj=new secA("Tanishque",59,"L-374 Sec-23",9310300737)
 // obj.show()
-class tanishque{
-    static count=0
-    constructor(){
-       tanishque.count=tanishque.count+1
+// class tanishque{
+//     static count=0
+//     name=""
+//     constructor(m){
+//        tanishque.count=tanishque.count+1
+//        this.name=this.name+(m)
+//     }
+//     show=()=>{
+//         console.log(tanishque.count)
+//         console.log(this.name)
+//     }
+// }
+// let obj=new tanishque("Tanishque")
+// let obj2=new tanishque("Sarthak")
+// obj.show()
+class student{
+    static func=()=>{
+        console.log("HellO")
     }
-    show=()=>{
-        console.log(tanishque.count)
+    func2=()=>{
+        console.log("Hi")
     }
 }
-let obj=new tanishque()
-let obj2=new tanishque()
-obj.show()
+let obj=new student()
+student.func()//static method call without object
+obj.func2()
