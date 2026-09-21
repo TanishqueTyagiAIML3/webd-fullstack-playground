@@ -48,14 +48,42 @@
 // let obj=new tanishque("Tanishque")
 // let obj2=new tanishque("Sarthak")
 // obj.show()
-class student{
-    static func=()=>{
-        console.log("HellO")
+// class student{
+//     static count=0
+//     static func=()=>{
+//         student.count+=1
+//         console.log(student.count)
+//     }
+//     func2=()=>{
+//         console.log("Hi")
+//     }
+// }
+// let obj=new student()
+// student.func()//static method call without object
+// obj.func2()
+class university{
+    rol=0;na="";mark=0;
+    static count=0
+    constructor(roll,name,marks)
+    {
+        this.rol=roll
+        this.na=name
+        this.mark=marks
+        university.count+=1
     }
-    func2=()=>{
-        console.log("Hi")
+    displayResult=()=>{
+        console.log(`Student ${this.na}`)
+        console.log(`Roll no ${this.rol}`)
+        if(this.mark>60)
+            console.log("Pass")
+        else
+            console.log("Fail")
+    } 
+    show=()=>{
+        console.log(`Students are ${university.count}`)
     }
 }
-let obj=new student()
-student.func()//static method call without object
-obj.func2()
+let obj=new university(25,"Tanishque",90)
+obj.displayResult()
+let obj2=new university(12,"Sarthak",30)
+obj.show()
