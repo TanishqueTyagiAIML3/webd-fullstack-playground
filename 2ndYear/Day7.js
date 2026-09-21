@@ -54,3 +54,13 @@ function name(show)
 name(()=>{
     console.log("Tanishque")
 })
+const promo=new Promise((resolve,reject)=>{
+    let status=true;
+    if(status)
+        resolve("Data recieved")
+    else
+        reject("Data reject")
+})
+promo.then(()=>{
+    console.log("Yup")
+})
